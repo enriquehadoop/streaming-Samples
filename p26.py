@@ -11,7 +11,7 @@ try:
 except:  
    print("Could not connect to MongoDB")
 	
-consumer = KafkaConsumer('terrorismo')
+consumer = KafkaConsumer('mexico') #topic name
 for msg in consumer:
     record = json.loads(msg.value)
     username = record['username']
